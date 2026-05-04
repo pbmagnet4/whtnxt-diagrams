@@ -1,0 +1,90 @@
+<mxfile host="app.diagrams.net" modified="2026-05-03T12:00:00.000Z" agent="Whtnxt Agent" version="24.0.0">
+  <diagram id="owner-flow" name="Owner Operator Flow">
+    <mxGraphModel dx="1422" dy="753" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1700" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- Title -->
+        <mxCell id="title" value="Whtnxt AaaS — Owner Operator Flow (Edward)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=20;fontStyle=1;fontColor=#1A1A1A;" vertex="1" parent="1">
+          <mxGeometry x="40" y="20" width="1620" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="subtitle" value="6 phases — system-building once, harvesting forever" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="40" y="60" width="1620" height="20" as="geometry" />
+        </mxCell>
+
+        <!-- Phase 1: Pre-launch -->
+        <mxCell id="p1" value="&lt;b&gt;Phase 1 · Pre-launch buildout&lt;/b&gt;&lt;br&gt;&lt;br&gt;6 weeks · one-time&lt;br&gt;&lt;br&gt;• n8n discovery + execution flows&lt;br&gt;• Supabase tenant model + RLS&lt;br&gt;• Next.js (marketing/dash/admin)&lt;br&gt;• Nango OAuth (GSC, WP)&lt;br&gt;• Langfuse per-tenant projects&lt;br&gt;• Stripe → provisioning webhook&lt;br&gt;• Action Card UI + rollback&lt;br&gt;• Monthly report generator&lt;br&gt;• Self-test as fake tenant" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;align=left;verticalAlign=top;spacingLeft=10;spacingTop=10;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="40" y="120" width="240" height="280" as="geometry" />
+        </mxCell>
+
+        <!-- Phase 2: Sales -->
+        <mxCell id="p2" value="&lt;b&gt;Phase 2 · Sales&lt;/b&gt;&lt;br&gt;&lt;br&gt;~1.5 hr per closed client&lt;br&gt;&lt;br&gt;• Lead in (cold/referral/content)&lt;br&gt;• Run /prospect-report&lt;br&gt;• Send PDF as opener&lt;br&gt;• 30-min discovery call&lt;br&gt;• Send proposal + Stripe link&lt;br&gt;• They pay → auto-provisioning&lt;br&gt;&lt;br&gt;&lt;i&gt;Touch point: client receives welcome email&lt;/i&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;align=left;verticalAlign=top;spacingLeft=10;spacingTop=10;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="320" y="120" width="240" height="280" as="geometry" />
+        </mxCell>
+
+        <!-- Phase 3: Onboarding oversight -->
+        <mxCell id="p3" value="&lt;b&gt;Phase 3 · Onboarding oversight&lt;/b&gt;&lt;br&gt;&lt;br&gt;First 7 days · ~1-2 hr/client (early)&lt;br&gt;&lt;br&gt;• Slack ping at provision&lt;br&gt;• Watch wizard-stuck signal (24h)&lt;br&gt;• Triage discovery failures&lt;br&gt;• Day 3: spot-check first cards&lt;br&gt;• Day 7: personal email&lt;br&gt;&lt;br&gt;&lt;i&gt;Touch points: day-3 polish, day-7 email&lt;/i&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;align=left;verticalAlign=top;spacingLeft=10;spacingTop=10;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="600" y="120" width="240" height="280" as="geometry" />
+        </mxCell>
+
+        <!-- Phase 4: Steady-state ops -->
+        <mxCell id="p4" value="&lt;b&gt;Phase 4 · Steady-state ops&lt;/b&gt;&lt;br&gt;&lt;br&gt;Ongoing · all clients&lt;br&gt;&lt;br&gt;&lt;b&gt;Daily (5 min):&lt;/b&gt; failure pings, cost anomalies&lt;br&gt;&lt;b&gt;Daily (10 min):&lt;/b&gt; admin queue review&lt;br&gt;&lt;b&gt;Weekly (30 min):&lt;/b&gt; prompt eval + promote&lt;br&gt;&lt;b&gt;Weekly (15 min):&lt;/b&gt; cost vs revenue per tenant&lt;br&gt;&lt;b&gt;Monthly (1 hr/10 clients):&lt;/b&gt; report notes&lt;br&gt;&lt;b&gt;Monthly:&lt;/b&gt; churn-risk calls&lt;br&gt;&lt;b&gt;Quarterly:&lt;/b&gt; new agent capabilities" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;align=left;verticalAlign=top;spacingLeft=10;spacingTop=10;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="880" y="120" width="240" height="280" as="geometry" />
+        </mxCell>
+
+        <!-- Phase 5: Account growth -->
+        <mxCell id="p5" value="&lt;b&gt;Phase 5 · Account growth&lt;/b&gt;&lt;br&gt;&lt;br&gt;Per-client · ongoing&lt;br&gt;&lt;br&gt;• 80% token cap → upgrade email (auto)&lt;br&gt;• &gt;90% approval 3mo → manual upgrade pitch&lt;br&gt;• Cross-sell on call mentions&lt;br&gt;• Annual renewal auto + case-study ask to top 20%&lt;br&gt;&lt;br&gt;&lt;i&gt;Twenty CRM tasks drive your touchpoints&lt;/i&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;align=left;verticalAlign=top;spacingLeft=10;spacingTop=10;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="1160" y="120" width="240" height="280" as="geometry" />
+        </mxCell>
+
+        <!-- Phase 6: Churn handling -->
+        <mxCell id="p6" value="&lt;b&gt;Phase 6 · Churn handling&lt;/b&gt;&lt;br&gt;&lt;br&gt;Trigger-based&lt;br&gt;&lt;br&gt;• 2mo &lt; 5% lift → CRM flag → call&lt;br&gt;• Cancel → auto data export + final report&lt;br&gt;• &quot;Didn't deliver&quot; → personal call, root-cause&lt;br&gt;• &quot;Internal change&quot; → friendly off-ramp&lt;br&gt;&lt;br&gt;&lt;i&gt;Easy cancel button is a sales asset&lt;/i&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;align=left;verticalAlign=top;spacingLeft=10;spacingTop=10;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="1440" y="120" width="240" height="280" as="geometry" />
+        </mxCell>
+
+        <!-- Arrows -->
+        <mxCell id="e1" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#666666;" edge="1" parent="1" source="p1" target="p2"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e2" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#666666;" edge="1" parent="1" source="p2" target="p3"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e3" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#666666;" edge="1" parent="1" source="p3" target="p4"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e4" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#666666;" edge="1" parent="1" source="p4" target="p5"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e5" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#666666;" edge="1" parent="1" source="p5" target="p6"><mxGeometry relative="1" as="geometry"/></mxCell>
+
+        <!-- Stack annotations row -->
+        <mxCell id="stack-title" value="&lt;b&gt;Tools used by phase&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="40" y="430" width="200" height="20" as="geometry" />
+        </mxCell>
+
+        <mxCell id="s1" value="n8n · Supabase · Next.js&lt;br&gt;Nango · Langfuse · Stripe" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=10;fontStyle=2;" vertex="1" parent="1">
+          <mxGeometry x="40" y="460" width="240" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="s2" value="Twenty CRM · /prospect-report&lt;br&gt;Email Composer · Stripe Checkout" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=10;fontStyle=2;" vertex="1" parent="1">
+          <mxGeometry x="320" y="460" width="240" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="s3" value="Slack · Next.js admin&lt;br&gt;Langfuse · Email Composer" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=10;fontStyle=2;" vertex="1" parent="1">
+          <mxGeometry x="600" y="460" width="240" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="s4" value="Slack · Langfuse · Next.js admin&lt;br&gt;Astro report template · Listmonk" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=10;fontStyle=2;" vertex="1" parent="1">
+          <mxGeometry x="880" y="460" width="240" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="s5" value="Twenty CRM · n8n cron&lt;br&gt;Stripe · Email Composer" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=10;fontStyle=2;" vertex="1" parent="1">
+          <mxGeometry x="1160" y="460" width="240" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="s6" value="Twenty CRM · Calendar&lt;br&gt;Astro · n8n export workflow" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=10;fontStyle=2;" vertex="1" parent="1">
+          <mxGeometry x="1440" y="460" width="240" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- Load-bearing assets callout -->
+        <mxCell id="load-bearing" value="&lt;b&gt;Load-bearing assets&lt;/b&gt; (if these break, the system breaks)&lt;br&gt;1. Admin dashboard &quot;needs attention&quot; queue → enables 100-client scale&lt;br&gt;2. Langfuse cost-anomaly alerts → prevents runaway-agent margin erosion&lt;br&gt;3. Twenty CRM churn flags → catches churn before cancellation" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff4e6;strokeColor=#d79b00;align=left;verticalAlign=top;spacingLeft=15;spacingTop=10;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="40" y="560" width="800" height="100" as="geometry" />
+        </mxCell>
+
+        <!-- Touch points callout -->
+        <mxCell id="touch" value="&lt;b&gt;Touch points with client flow&lt;/b&gt; (where your job meets their experience)&lt;br&gt;Welcome email · Day-3 spot-check · Day-7 personal email · Failed-action triage&lt;br&gt;Monthly report personal note · Churn-risk call · Annual renewal/testimonial ask" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;align=left;verticalAlign=top;spacingLeft=15;spacingTop=10;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="880" y="560" width="800" height="100" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

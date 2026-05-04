@@ -1,0 +1,99 @@
+<mxfile host="app.diagrams.net" modified="2026-05-03T12:00:00.000Z" agent="Whtnxt Agent" version="24.0.0">
+  <diagram id="client-flow" name="Client Lifecycle Flow">
+    <mxGraphModel dx="1422" dy="753" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1900" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- Title -->
+        <mxCell id="title" value="Whtnxt AaaS — Client Lifecycle Flow" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=20;fontStyle=1;fontColor=#1A1A1A;" vertex="1" parent="1">
+          <mxGeometry x="40" y="20" width="1820" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="subtitle" value="7 phases — designed so 90% of moments are self-serve" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="40" y="60" width="1820" height="20" as="geometry" />
+        </mxCell>
+
+        <!-- Phase 1: Discovery -->
+        <mxCell id="c1" value="&lt;b&gt;Phase 1 · Discovery&lt;/b&gt;&lt;br&gt;&lt;i&gt;Pre-purchase&lt;/i&gt;&lt;br&gt;&lt;br&gt;• Find Whtnxt (cold, referral, search)&lt;br&gt;• Get personalized site-audit PDF&lt;br&gt;• Book 30-min discovery call&lt;br&gt;• See live agent demo on call&lt;br&gt;• Receive 1-page proposal&lt;br&gt;• Click Stripe Checkout, pay&lt;br&gt;&lt;br&gt;&lt;b&gt;Friction:&lt;/b&gt; ~45 min total" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;align=left;verticalAlign=top;spacingLeft=10;spacingTop=10;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="40" y="120" width="240" height="240" as="geometry" />
+        </mxCell>
+
+        <!-- Phase 2: Activation -->
+        <mxCell id="c2" value="&lt;b&gt;Phase 2 · Activation&lt;/b&gt;&lt;br&gt;&lt;i&gt;T+0 to T+15 min&lt;/i&gt;&lt;br&gt;&lt;br&gt;• Welcome email arrives in 60s&lt;br&gt;• Click magic-link login&lt;br&gt;• 4-step wizard:&lt;br&gt;&amp;nbsp;&amp;nbsp;1. Site identity&lt;br&gt;&amp;nbsp;&amp;nbsp;2. Connect GSC (Nango)&lt;br&gt;&amp;nbsp;&amp;nbsp;3. Connect website&lt;br&gt;&amp;nbsp;&amp;nbsp;4. Autonomy preferences&lt;br&gt;• Click &quot;Activate Agent&quot;&lt;br&gt;&lt;br&gt;&lt;b&gt;Friction:&lt;/b&gt; ~8-12 min" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;align=left;verticalAlign=top;spacingLeft=10;spacingTop=10;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="320" y="120" width="240" height="240" as="geometry" />
+        </mxCell>
+
+        <!-- Phase 3: First impression -->
+        <mxCell id="c3" value="&lt;b&gt;Phase 3 · First impression&lt;/b&gt;&lt;br&gt;&lt;i&gt;T+2 hours · the wow moment&lt;/i&gt;&lt;br&gt;&lt;br&gt;• Email: &quot;Your agent finished its first audit&quot;&lt;br&gt;• Land on Action Card queue (12 cards)&lt;br&gt;• Each card shows: what, why, impact, [Approve/Edit/Reject]&lt;br&gt;• &quot;Why this?&quot; opens Langfuse trace&lt;br&gt;• Approve first card → change applies in ~2 min&lt;br&gt;• See &quot;Recent Changes&quot; feed update live" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;align=left;verticalAlign=top;spacingLeft=10;spacingTop=10;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="600" y="120" width="240" height="240" as="geometry" />
+        </mxCell>
+
+        <!-- Phase 4: Daily/weekly use -->
+        <mxCell id="c4" value="&lt;b&gt;Phase 4 · Daily/weekly use&lt;/b&gt;&lt;br&gt;&lt;i&gt;Ongoing · ~5-15 min/week&lt;/i&gt;&lt;br&gt;&lt;br&gt;• Email digest: &quot;X new recommendations&quot;&lt;br&gt;• Approve cards in seconds&lt;br&gt;• Reject with reason → feeds learning&lt;br&gt;• Auto-applied (Balanced/Aggressive) → daily digest&lt;br&gt;• Live &quot;Recent Changes&quot; feed&lt;br&gt;• Failure: honest email, no stack traces" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;align=left;verticalAlign=top;spacingLeft=10;spacingTop=10;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="880" y="120" width="240" height="240" as="geometry" />
+        </mxCell>
+
+        <!-- Phase 5: First monthly review -->
+        <mxCell id="c5" value="&lt;b&gt;Phase 5 · Monthly review&lt;/b&gt;&lt;br&gt;&lt;i&gt;T+30 days · the retention artifact&lt;/i&gt;&lt;br&gt;&lt;br&gt;• Branded PDF in inbox + dashboard&lt;br&gt;• Tasks performed, outcomes, top 3 wins&lt;br&gt;• &lt;b&gt;Public Langfuse trace link&lt;/b&gt; — full audit&lt;br&gt;• 2-sentence personal note from Edward&lt;br&gt;• Optional 15-min review call&lt;br&gt;&lt;br&gt;&lt;b&gt;Pre-frame:&lt;/b&gt; rank lift = 30-90 days" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;align=left;verticalAlign=top;spacingLeft=10;spacingTop=10;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="1160" y="120" width="240" height="240" as="geometry" />
+        </mxCell>
+
+        <!-- Phase 6: Steady use -->
+        <mxCell id="c6" value="&lt;b&gt;Phase 6 · Steady use&lt;/b&gt;&lt;br&gt;&lt;i&gt;Months 2-12&lt;/i&gt;&lt;br&gt;&lt;br&gt;• Monthly reports trending up&lt;br&gt;• Quarterly strategy emails (bigger plays)&lt;br&gt;• New capability announcements&lt;br&gt;• Token-cap warnings before overage&lt;br&gt;• Renewal notice 30 days before annual cycle" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;align=left;verticalAlign=top;spacingLeft=10;spacingTop=10;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="1440" y="120" width="240" height="240" as="geometry" />
+        </mxCell>
+
+        <!-- Phase 7: Renewal/Churn -->
+        <mxCell id="c7" value="&lt;b&gt;Phase 7 · Renewal or churn&lt;/b&gt;&lt;br&gt;&lt;i&gt;Annual cycle&lt;/i&gt;&lt;br&gt;&lt;br&gt;&lt;b&gt;Happy:&lt;/b&gt; auto-renew, year-in-review, testimonial ask&lt;br&gt;&lt;br&gt;&lt;b&gt;Churn:&lt;/b&gt;&lt;br&gt;• One-click cancel in dashboard&lt;br&gt;• Auto data export + final report&lt;br&gt;• 30-day grace period to reactivate&lt;br&gt;• Friendly off-ramp email" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;align=left;verticalAlign=top;spacingLeft=10;spacingTop=10;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="1720" y="120" width="240" height="240" as="geometry" />
+        </mxCell>
+
+        <!-- Arrows -->
+        <mxCell id="ce1" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#666666;" edge="1" parent="1" source="c1" target="c2"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="ce2" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#666666;" edge="1" parent="1" source="c2" target="c3"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="ce3" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#666666;" edge="1" parent="1" source="c3" target="c4"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="ce4" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#666666;" edge="1" parent="1" source="c4" target="c5"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="ce5" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#666666;" edge="1" parent="1" source="c5" target="c6"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="ce6" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#666666;" edge="1" parent="1" source="c6" target="c7"><mxGeometry relative="1" as="geometry"/></mxCell>
+
+        <!-- What they see by phase -->
+        <mxCell id="surface-title" value="&lt;b&gt;What they see / where&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="40" y="390" width="200" height="20" as="geometry" />
+        </mxCell>
+
+        <mxCell id="sf1" value="Email · whtnxt.io site&lt;br&gt;Calendly · Google Meet" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=10;fontStyle=2;" vertex="1" parent="1">
+          <mxGeometry x="40" y="420" width="240" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="sf2" value="Inbox · app.whtnxt.io&lt;br&gt;Wizard (Next.js)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=10;fontStyle=2;" vertex="1" parent="1">
+          <mxGeometry x="320" y="420" width="240" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="sf3" value="Dashboard · their live site&lt;br&gt;Action Cards · Langfuse trace" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=10;fontStyle=2;" vertex="1" parent="1">
+          <mxGeometry x="600" y="420" width="240" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="sf4" value="Email digest · Dashboard&lt;br&gt;Realtime Recent Changes feed" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=10;fontStyle=2;" vertex="1" parent="1">
+          <mxGeometry x="880" y="420" width="240" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="sf5" value="Branded PDF report&lt;br&gt;Dashboard · trace link" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=10;fontStyle=2;" vertex="1" parent="1">
+          <mxGeometry x="1160" y="420" width="240" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="sf6" value="Monthly emails&lt;br&gt;Dashboard · Stripe billing" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=10;fontStyle=2;" vertex="1" parent="1">
+          <mxGeometry x="1440" y="420" width="240" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="sf7" value="Dashboard cancel button&lt;br&gt;Final report email" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=10;fontStyle=2;" vertex="1" parent="1">
+          <mxGeometry x="1720" y="420" width="240" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- Load-bearing assets -->
+        <mxCell id="client-loadbearing" value="&lt;b&gt;Load-bearing client moments&lt;/b&gt; (these decide retention)&lt;br&gt;1. The 4-step wizard — every minute of friction loses 5% of activations&lt;br&gt;2. The first Action Card queue — if it's not impressive in session 1, they're already evaluating cancellation&lt;br&gt;3. The &quot;Why this?&quot; trace link — makes the agent feel intelligent, not random&lt;br&gt;4. The monthly report — auto-generated, but read by humans · this is the renewal artifact" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff4e6;strokeColor=#d79b00;align=left;verticalAlign=top;spacingLeft=15;spacingTop=10;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="40" y="510" width="900" height="120" as="geometry" />
+        </mxCell>
+
+        <!-- Architectural rule -->
+        <mxCell id="rule" value="&lt;b&gt;Architectural rule&lt;/b&gt;&lt;br&gt;&lt;br&gt;Touch points the client experiences as &lt;i&gt;automated&lt;/i&gt; should never feel obviously automated.&lt;br&gt;&lt;br&gt;Touch points they experience as &lt;i&gt;personal&lt;/i&gt; (welcome, day-7 email, monthly note, churn call) must actually be personal.&lt;br&gt;&lt;br&gt;That 5 minutes of human note on the monthly report is what separates this from a SaaS tool." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;align=left;verticalAlign=top;spacingLeft=15;spacingTop=10;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="980" y="510" width="980" height="120" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
