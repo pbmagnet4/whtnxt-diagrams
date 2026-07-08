@@ -89,6 +89,19 @@
         <mxCell id="e15" value="mark executed + date" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;fontSize=10;dashed=1;" edge="1" parent="1" source="action" target="nocodb"><mxGeometry relative="1" as="geometry" /></mxCell>
         <mxCell id="e16" value="next runs re-measure the site (closes the loop)" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;fontSize=10;dashed=1;exitX=0;exitY=0.5;" edge="1" parent="1" source="site" target="google"><mxGeometry relative="1" as="geometry" /></mxCell>
 
+        <!-- Langflow door (planned) -->
+        <mxCell id="langflow" value="&lt;b&gt;Langflow BUILD DOOR (planned)&lt;/b&gt;&lt;br&gt;visual authoring canvas on Mac Pro :7860;&lt;br&gt;exports flow JSON wrapping these same&lt;br&gt;nxtoskit.seo components&lt;br&gt;&lt;font size=1&gt;gate: SP1 Task 5 e2e proof (flow JSON runs headless)&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;dashed=1;fillColor=#ffffff;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="1080" y="60" width="300" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="runner" value="&lt;b&gt;nxtoskit runner (planned lane)&lt;/b&gt;&lt;br&gt;executes exported flow + tenant config&lt;br&gt;&lt;font size=1&gt;scripts/run_nodeagent.py + nxtoskit/nodeagent/tenancy.py&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;dashed=1;fillColor=#ffffff;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="1420" y="80" width="150" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="e17" value="exports flow JSON" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;fontSize=10;dashed=1;" edge="1" parent="1" source="langflow" target="runner"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e18" value="alternate door: same measure/diagnose components, same ledgers" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;fontSize=10;dashed=1;exitX=0;exitY=1;" edge="1" parent="1" source="langflow" target="measure"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="doors" value="&lt;i&gt;Two doors, one engine: the Hermes cron + CLI (shipped, solid) and the Langflow flow + runner (planned, dashed) both drive the same nxtoskit.seo package. The wrapper is the product; the door is swappable.&lt;/i&gt;" style="text;html=1;align=left;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="1080" y="190" width="480" height="60" as="geometry" />
+        </mxCell>
+
         <!-- Title -->
         <mxCell id="title" value="&lt;b&gt;&lt;font size=4&gt;SEO Optimizer NxtNodeAgent (nxtoskit.seo)&lt;/font&gt;&lt;/b&gt;&lt;br&gt;package-first, tenant-config-driven: MEASURE -&gt; DIAGNOSE -&gt; REPORT -&gt; (act) -&gt; SCORE" style="text;html=1;align=left;" vertex="1" parent="1">
           <mxGeometry x="420" y="40" width="640" height="60" as="geometry" />
