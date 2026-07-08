@@ -1,0 +1,99 @@
+<mxfile host="drawio.whtnxt.io" modified="2026-07-08T15:00:00.000Z" agent="claude" version="24.0.0">
+  <diagram id="seo-optimizer-arch" name="SEO Optimizer NxtNodeAgent">
+    <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1000" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- Trigger -->
+        <mxCell id="cron" value="&lt;b&gt;Hermes Cron (weekly)&lt;/b&gt;&lt;br&gt;per-tenant Hermes profile&lt;br&gt;&lt;font size=1&gt;~/.hermes/cron/jobs.json&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="40" y="60" width="240" height="80" as="geometry" />
+        </mxCell>
+
+        <!-- Tenant config -->
+        <mxCell id="tenant" value="&lt;b&gt;Tenant Config (per property)&lt;/b&gt;&lt;br&gt;tenant.yaml: site_url, sitemap, NocoDB base,&lt;br&gt;budgets, priority_sections, notify&lt;br&gt;&lt;font size=1&gt;examples/seo-optimizer/configs/&lt;tenant&gt;.yaml&lt;br&gt;schema/nxtos-seo-tenant.schema.json + nxtoskit/seo/tenant.py&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="40" y="200" width="300" height="110" as="geometry" />
+        </mxCell>
+
+        <!-- CLI -->
+        <mxCell id="cli" value="&lt;b&gt;nxtos-seo CLI (orchestrator)&lt;/b&gt;&lt;br&gt;--provision | --dry-run | --today | --env-file&lt;br&gt;exit 0/1/2, creds from env&lt;br&gt;&lt;font size=1&gt;nxtoskit/seo/cli.py&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="420" y="180" width="280" height="100" as="geometry" />
+        </mxCell>
+
+        <!-- Measure -->
+        <mxCell id="measure" value="&lt;b&gt;1. MEASURE&lt;/b&gt;&lt;br&gt;28d window (3d GSC lag) vs prior 28d&lt;br&gt;pages + page/query analytics, sitemap fetch,&lt;br&gt;URL inspections: 50/run, oldest-checked first&lt;br&gt;&lt;font size=1&gt;nxtoskit/seo/measure.py + gsc.py&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="420" y="360" width="300" height="110" as="geometry" />
+        </mxCell>
+
+        <!-- Google -->
+        <mxCell id="google" value="&lt;b&gt;Google APIs&lt;/b&gt;&lt;br&gt;OAuth2 refresh-token&lt;br&gt;Search Analytics&lt;br&gt;URL Inspection (2000/day)&lt;br&gt;sitemap.xml (site)" style="shape=cloud;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="440" y="540" width="260" height="130" as="geometry" />
+        </mxCell>
+
+        <!-- Diagnose -->
+        <mxCell id="diagnose" value="&lt;b&gt;2. DIAGNOSE (deterministic, no LLM)&lt;/b&gt;&lt;br&gt;striking_distance (pos 5-15, impr &gt;= 50)&lt;br&gt;ctr_gap (CTR &lt; 40% of expected)&lt;br&gt;decay_refresh (clicks halved)&lt;br&gt;index_remediation (unindexed priority page, max 2)&lt;br&gt;top 5 by impact, dedup vs open actions&lt;br&gt;&lt;font size=1&gt;nxtoskit/seo/diagnose.py&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="800" y="340" width="320" height="150" as="geometry" />
+        </mxCell>
+
+        <!-- Score -->
+        <mxCell id="score" value="&lt;b&gt;4. SCORE (self-improving loop)&lt;/b&gt;&lt;br&gt;actions executed 14+ days ago:&lt;br&gt;win / loss / neutral vs baseline&lt;br&gt;(clicks x1.25+2 or position +2)&lt;br&gt;&lt;font size=1&gt;nxtoskit/seo/diagnose.py::score_outcomes&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="800" y="560" width="320" height="120" as="geometry" />
+        </mxCell>
+
+        <!-- NocoDB -->
+        <mxCell id="nocodb" value="&lt;b&gt;NocoDB Ledgers (per-tenant state)&lt;/b&gt;&lt;br&gt;one base per tenant&lt;br&gt;&lt;br&gt;&lt;b&gt;SEO Coverage&lt;/b&gt;&lt;br&gt;URL, state, indexed, first/last checked, 28d analytics&lt;br&gt;&lt;br&gt;&lt;b&gt;SEO Actions&lt;/b&gt;&lt;br&gt;proposed -&gt; executed -&gt; scored, hypothesis,&lt;br&gt;baselines, outcome&lt;br&gt;&lt;font size=1&gt;nxtoskit/seo/ledger.py + provision.py&lt;/font&gt;" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="1220" y="300" width="320" height="240" as="geometry" />
+        </mxCell>
+
+        <!-- Report -->
+        <mxCell id="report" value="&lt;b&gt;3. REPORT&lt;/b&gt;&lt;br&gt;plain-text digest: coverage census, top pages,&lt;br&gt;proposed actions, scored outcomes&lt;br&gt;&lt;font size=1&gt;nxtoskit/seo/report.py&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="420" y="740" width="300" height="90" as="geometry" />
+        </mxCell>
+
+        <!-- Telegram -->
+        <mxCell id="telegram" value="&lt;b&gt;Telegram + origin&lt;/b&gt;&lt;br&gt;cron deliver routes&lt;br&gt;stdout digest to Edward" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="80" y="750" width="200" height="70" as="geometry" />
+        </mxCell>
+
+        <!-- Langfuse -->
+        <mxCell id="langfuse" value="&lt;b&gt;Langfuse (optional)&lt;/b&gt;&lt;br&gt;trace + measure/diagnose/report spans&lt;br&gt;skipped if LANGFUSE_* unset&lt;br&gt;&lt;font size=1&gt;nxtoskit/observability/*&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;dashed=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="760" y="120" width="250" height="80" as="geometry" />
+        </mxCell>
+
+        <!-- Action layer -->
+        <mxCell id="action" value="&lt;b&gt;ACTION LAYER (next SP: Hermes skill)&lt;/b&gt;&lt;br&gt;reads proposed actions, edits the property repo&lt;br&gt;(titles/meta, content, internal links), commits,&lt;br&gt;sets Status=executed + Executed date&lt;br&gt;&lt;i&gt;today: operator/orchestrator does this manually&lt;/i&gt;" style="rounded=1;whiteSpace=wrap;html=1;dashed=1;fillColor=#ffffff;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="1220" y="640" width="320" height="120" as="geometry" />
+        </mxCell>
+
+        <!-- Site -->
+        <mxCell id="site" value="&lt;b&gt;Property repo + Vercel&lt;/b&gt;&lt;br&gt;tenant-site.com" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1270" y="820" width="220" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- Edges -->
+        <mxCell id="e1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;" edge="1" parent="1" source="cron" target="cli"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e1l" value="python3 -m nxtoskit.seo.cli --tenant tenant.yaml" style="edgeLabel;html=1;fontSize=10;" vertex="1" connectable="0" parent="e1"><mxGeometry x="-0.2" relative="1" as="geometry" /></mxCell>
+        <mxCell id="e2" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;" edge="1" parent="1" source="tenant" target="cli"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;" edge="1" parent="1" source="cli" target="measure"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e4" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;" edge="1" parent="1" source="measure" target="google"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e5" value="upsert coverage (50 rows/run)" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;fontSize=10;" edge="1" parent="1" source="measure" target="nocodb"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e6" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;" edge="1" parent="1" source="measure" target="diagnose"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e7" value="insert proposals (top 5)" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;fontSize=10;" edge="1" parent="1" source="diagnose" target="nocodb"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e8" value="read open actions" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;fontSize=10;dashed=1;" edge="1" parent="1" source="nocodb" target="score"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e9" value="write outcomes" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;fontSize=10;" edge="1" parent="1" source="score" target="nocodb"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e10" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;" edge="1" parent="1" source="measure" target="report"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e11" value="stdout digest" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;fontSize=10;" edge="1" parent="1" source="report" target="telegram"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e12" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;dashed=1;" edge="1" parent="1" source="cli" target="langfuse"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e13" value="proposed actions" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;fontSize=10;dashed=1;" edge="1" parent="1" source="nocodb" target="action"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e14" value="title/meta/content edits, deploy" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;fontSize=10;dashed=1;" edge="1" parent="1" source="action" target="site"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e15" value="mark executed + date" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;fontSize=10;dashed=1;" edge="1" parent="1" source="action" target="nocodb"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e16" value="next runs re-measure the site (closes the loop)" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;fontSize=10;dashed=1;exitX=0;exitY=0.5;" edge="1" parent="1" source="site" target="google"><mxGeometry relative="1" as="geometry" /></mxCell>
+
+        <!-- Title -->
+        <mxCell id="title" value="&lt;b&gt;&lt;font size=4&gt;SEO Optimizer NxtNodeAgent (nxtoskit.seo)&lt;/font&gt;&lt;/b&gt;&lt;br&gt;package-first, tenant-config-driven: MEASURE -&gt; DIAGNOSE -&gt; REPORT -&gt; (act) -&gt; SCORE" style="text;html=1;align=left;" vertex="1" parent="1">
+          <mxGeometry x="420" y="40" width="640" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
