@@ -5,7 +5,7 @@
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
 
-        <mxCell id="title" value="&lt;b&gt;&lt;font size=4&gt;SEO Optimizer NxtNodeAgent (nxtoskit.seo)&lt;/font&gt;&lt;/b&gt;&lt;br&gt;ONE n8n workflow (two Schedule Triggers), one package. Narrow judgment = one DeepSeek LLM node;&lt;br&gt;wide judgment = the per-tenant Hermes agent, invoked BY n8n via webhook (it schedules nothing).&lt;br&gt;No Langflow (settled 2026-07-09; interim Hermes measure cron retires when SP5 lands)." style="text;html=1;align=left;" vertex="1" parent="1">
+        <mxCell id="title" value="&lt;b&gt;&lt;font size=4&gt;SEO Optimizer NxtNodeAgent (nxtoskit.seo)&lt;/font&gt;&lt;/b&gt;&lt;br&gt;ONE n8n workflow (two Schedule Triggers), one package, ONE brain: the per-tenant-profile Hermes&lt;br&gt;agent, invoked by n8n as an SSH one-shot. All judgment lives in the agent; all determinism in nxtoskit.seo.&lt;br&gt;No Langflow, no separate LLM nodes (as built 2026-07-09; OKF bundle: nxtos agents/seo-optimizer/)." style="text;html=1;align=left;" vertex="1" parent="1">
           <mxGeometry x="40" y="20" width="900" height="80" as="geometry" />
         </mxCell>
 
@@ -62,22 +62,22 @@
         <mxCell id="b1" value="Schedule Trigger&lt;br&gt;30 12 * * 3 (UTC)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#d81b60;" vertex="1" parent="1">
           <mxGeometry x="880" y="510" width="180" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="b2" value="Read proposals (NocoDB)&lt;br&gt;Status=proposed, cap 2/run&lt;br&gt;+ fetch lessons and page queries&lt;br&gt;via SSH → nxtos-seo helpers" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#d81b60;" vertex="1" parent="1">
+        <mxCell id="b2" value="SSH one-shot → hermes -p per-tenant-profile&lt;br&gt;chat -Q --skills seo-action&lt;br&gt;(supervised flag lives in workflow.json)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#d81b60;" vertex="1" parent="1">
           <mxGeometry x="880" y="590" width="220" height="90" as="geometry" />
         </mxCell>
-        <mxCell id="b3" value="Switch: autonomy tier&lt;br&gt;(from tenant YAML)" style="rhombus;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#d81b60;" vertex="1" parent="1">
+        <mxCell id="b3" value="autonomy tier per action&lt;br&gt;(tenant YAML), enforced&lt;br&gt;INSIDE the agent" style="rhombus;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#d81b60;" vertex="1" parent="1">
           <mxGeometry x="1150" y="590" width="170" height="90" as="geometry" />
         </mxCell>
-        <mxCell id="b4" value="&lt;b&gt;LLM node — DeepSeek (the one judgment step)&lt;/b&gt;&lt;br&gt;prompt: proposal + lessons block + page&#39;s real GSC&lt;br&gt;queries + quality rules (≤65 char title, 150-160 desc,&lt;br&gt;no dashes, no invented claims)&lt;br&gt;→ structured JSON {route, new_title, new_description}" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+        <mxCell id="b4" value="&lt;b&gt;THE ONE BRAIN: Hermes per-tenant-profile profile&lt;/b&gt;&lt;br&gt;self-assembles brief: 2 oldest proposals (ledger),&lt;br&gt;lessons (nxtos-seo --lessons), page&#39;s real GSC queries,&lt;br&gt;metadata map; rewrites under hard gates (&lt;=65 title,&lt;br&gt;150-160 desc, no dashes, no invented claims)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
           <mxGeometry x="1370" y="510" width="280" height="110" as="geometry" />
         </mxCell>
-        <mxCell id="b5" value="SSH → nxtos-seo apply&lt;br&gt;metadata_map locates the file, edits,&lt;br&gt;runs build gate (tsc), commits, pushes&lt;br&gt;(deterministic — LLM never touches repo)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#d81b60;" vertex="1" parent="1">
+        <mxCell id="b5" value="auto: commit + push main (Vercel deploys)&lt;br&gt;propose: review branch + Telegram approval&lt;br&gt;task: NocoDB task, no edits&lt;br&gt;build gate (tsc) + verified-write rule" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#d81b60;" vertex="1" parent="1">
           <mxGeometry x="1370" y="650" width="280" height="90" as="geometry" />
         </mxCell>
-        <mxCell id="b6" value="Mark executed + Execution Notes&lt;br&gt;(before/after, files, commit SHA)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#d81b60;" vertex="1" parent="1">
+        <mxCell id="b6" value="Ledger update: executed + Execution Notes&lt;br&gt;(shipped_title: first line); propose rows stay&lt;br&gt;proposed until the human merges" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#d81b60;" vertex="1" parent="1">
           <mxGeometry x="1370" y="770" width="280" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="b7" value="&lt;b&gt;Hermes agent lane (wide judgment)&lt;/b&gt;&lt;br&gt;content-level actions (decay_refresh,&lt;br&gt;striking_distance): HTTP node POSTs brief to&lt;br&gt;per-tenant Hermes webhook; agent&lt;br&gt;edits repo under blog-skill quality gates&lt;br&gt;(propose tier: branch + Telegram approval).&lt;br&gt;Fallback if unreachable: NocoDB task" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;dashed=1;" vertex="1" parent="1">
+        <mxCell id="b7" value="n8n Code node: parse the agent&#39;s&lt;br&gt;JSON response contract&lt;br&gt;(malformed JSON = visible failure)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;dashed=1;" vertex="1" parent="1">
           <mxGeometry x="1090" y="750" width="250" height="130" as="geometry" />
         </mxCell>
         <mxCell id="b8" value="Telegram summary&lt;br&gt;(shipped / proposed / tasked)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#d81b60;" vertex="1" parent="1">
