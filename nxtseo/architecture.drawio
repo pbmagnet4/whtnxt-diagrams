@@ -1,0 +1,138 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="NxtSEO" id="nxtseo-map">
+    <mxGraphModel dx="1400" dy="900" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1920" pageHeight="1200" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="n11" value="THE LOOP  ·  one client, one run" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#b0b0b0;dashed=1;verticalAlign=top;align=left;spacingLeft=8;fontSize=13;fontStyle=1;fontColor=#666666;" vertex="1" parent="1"><mxGeometry x="20" y="60" width="1840" height="300" as="geometry"/></mxCell>
+        <mxCell id="n12" value="REPORTING  ·  the read side" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#b0b0b0;dashed=1;verticalAlign=top;align=left;spacingLeft=8;fontSize=13;fontStyle=1;fontColor=#666666;" vertex="1" parent="1"><mxGeometry x="20" y="390" width="1840" height="250" as="geometry"/></mxCell>
+        <mxCell id="n13" value="THE CONTENT LANE  ·  what changes" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#b0b0b0;dashed=1;verticalAlign=top;align=left;spacingLeft=8;fontSize=13;fontStyle=1;fontColor=#666666;" vertex="1" parent="1"><mxGeometry x="20" y="670" width="1840" height="330" as="geometry"/></mxCell>
+        <mxCell id="n14" value="Google Search Console
+analytics + URL inspection" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;verticalAlign=middle;arcSize=8;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1"><mxGeometry x="45" y="105" width="150" height="70" as="geometry"/></mxCell>
+        <mxCell id="n15" value="sitemap
+(index followed)" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;verticalAlign=middle;arcSize=8;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1"><mxGeometry x="45" y="190" width="150" height="55" as="geometry"/></mxCell>
+        <mxCell id="n16" value="keyword bank
+(both dialects)" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;verticalAlign=middle;arcSize=8;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1"><mxGeometry x="45" y="260" width="150" height="55" as="geometry"/></mxCell>
+        <mxCell id="n17" value="MEASURE
+sense lane" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;verticalAlign=middle;arcSize=8;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1"><mxGeometry x="240" y="150" width="165" height="80" as="geometry"/></mxCell>
+        <mxCell id="n18" value="per-client ledger
+sqlite, gitignored" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=8;fontSize=12;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1"><mxGeometry x="240" y="265" width="165" height="60" as="geometry"/></mxCell>
+        <mxCell id="n19" value="DIAGNOSE
+11 action types
+ranked by impact" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;verticalAlign=middle;arcSize=8;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1"><mxGeometry x="450" y="150" width="165" height="80" as="geometry"/></mxCell>
+        <mxCell id="n20" value="GATE
+tier x ceiling
+no approve-all" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;verticalAlign=middle;arcSize=8;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1"><mxGeometry x="660" y="150" width="165" height="80" as="geometry"/></mxCell>
+        <mxCell id="n21" value="ACT
+executors" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;verticalAlign=middle;arcSize=8;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1"><mxGeometry x="870" y="150" width="165" height="80" as="geometry"/></mxCell>
+        <mxCell id="n22" value="RECORD
+verifies, never
+believes the caller" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;verticalAlign=middle;arcSize=8;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1"><mxGeometry x="1080" y="150" width="165" height="80" as="geometry"/></mxCell>
+        <mxCell id="n23" value="SCORE
+diff-in-diff vs
+section controls" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;verticalAlign=middle;arcSize=8;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1"><mxGeometry x="1290" y="150" width="165" height="80" as="geometry"/></mxCell>
+        <mxCell id="n24" value="OUTCOMES
+win / loss / neutral
+Wilson-gated promotion" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;verticalAlign=middle;arcSize=8;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1"><mxGeometry x="1500" y="150" width="165" height="80" as="geometry"/></mxCell>
+        <mxCell id="n25" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;fontSize=10;endArrow=block;endFill=1;strokeColor=#5a5a5a;" edge="1" parent="1" source="n14" target="n17"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="n26" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;fontSize=10;endArrow=block;endFill=1;strokeColor=#5a5a5a;" edge="1" parent="1" source="n15" target="n17"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="n27" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;fontSize=10;endArrow=block;endFill=1;strokeColor=#5a5a5a;" edge="1" parent="1" source="n16" target="n19"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="n28" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;fontSize=10;endArrow=block;endFill=1;strokeColor=#5a5a5a;" edge="1" parent="1" source="n17" target="n18"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="n29" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;fontSize=10;endArrow=block;endFill=1;strokeColor=#5a5a5a;" edge="1" parent="1" source="n17" target="n19"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="n30" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;fontSize=10;endArrow=block;endFill=1;strokeColor=#5a5a5a;" edge="1" parent="1" source="n19" target="n20"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="n31" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;fontSize=10;endArrow=block;endFill=1;strokeColor=#5a5a5a;" edge="1" parent="1" source="n20" target="n21"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="n32" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;fontSize=10;endArrow=block;endFill=1;strokeColor=#5a5a5a;" edge="1" parent="1" source="n21" target="n22"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="n33" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;fontSize=10;endArrow=block;endFill=1;strokeColor=#5a5a5a;" edge="1" parent="1" source="n22" target="n23"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="n34" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;fontSize=10;endArrow=block;endFill=1;strokeColor=#5a5a5a;" edge="1" parent="1" source="n23" target="n24"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="n35" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;fontSize=10;endArrow=block;endFill=1;strokeColor=#5a5a5a;dashed=1;strokeColor=#999999;" edge="1" parent="1" source="n18" target="n23"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="n36" value="submit_indexing  ·  LIVE
+Indexing API, 3 executed" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;verticalAlign=middle;arcSize=8;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1"><mxGeometry x="855" y="258" width="195" height="44" as="geometry"/></mxCell>
+        <mxCell id="n37" value="copy_change  ·  WordPress only
+refuses git_vercel" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;verticalAlign=middle;arcSize=8;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1"><mxGeometry x="855" y="308" width="195" height="44" as="geometry"/></mxCell>
+        <mxCell id="n38" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;fontSize=10;endArrow=block;endFill=1;strokeColor=#5a5a5a;dashed=1;strokeColor=#999999;" edge="1" parent="1" source="n21" target="n36"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="n39" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;fontSize=10;endArrow=block;endFill=1;strokeColor=#5a5a5a;dashed=1;strokeColor=#999999;" edge="1" parent="1" source="n21" target="n37"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="n40" value="git:  commit exists
++ touches the slug" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;verticalAlign=middle;arcSize=8;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1"><mxGeometry x="1065" y="258" width="195" height="44" as="geometry"/></mxCell>
+        <mxCell id="n41" value="adapter:  is_live()
+on the real page" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;verticalAlign=middle;arcSize=8;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1"><mxGeometry x="1065" y="308" width="195" height="44" as="geometry"/></mxCell>
+        <mxCell id="n42" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;fontSize=10;endArrow=block;endFill=1;strokeColor=#5a5a5a;dashed=1;strokeColor=#999999;" edge="1" parent="1" source="n22" target="n40"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="n43" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;fontSize=10;endArrow=block;endFill=1;strokeColor=#5a5a5a;dashed=1;strokeColor=#999999;" edge="1" parent="1" source="n22" target="n41"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="n44" value="git + Vercel
+agent commits" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;verticalAlign=middle;arcSize=8;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1"><mxGeometry x="1290" y="258" width="165" height="44" as="geometry"/></mxCell>
+        <mxCell id="n45" value="WordPress REST
+autosave -&gt; publish" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;verticalAlign=middle;arcSize=8;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1"><mxGeometry x="1290" y="308" width="165" height="44" as="geometry"/></mxCell>
+        <mxCell id="n46" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;fontSize=10;endArrow=block;endFill=1;strokeColor=#5a5a5a;dashed=1;strokeColor=#999999;" edge="1" parent="1" source="n37" target="n45"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="n47" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;fontSize=10;endArrow=block;endFill=1;strokeColor=#5a5a5a;dashed=1;strokeColor=#999999;" edge="1" parent="1" source="n40" target="n44"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="n48" value="nxtseo publish
+full per-client reload" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;verticalAlign=middle;arcSize=8;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1"><mxGeometry x="240" y="440" width="165" height="70" as="geometry"/></mxCell>
+        <mxCell id="n49" value="Postgres mart" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=8;fontSize=12;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1"><mxGeometry x="450" y="440" width="165" height="70" as="geometry"/></mxCell>
+        <mxCell id="n50" value="raw.*  mirror
+mart.*  13 views" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;verticalAlign=middle;arcSize=8;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1"><mxGeometry x="450" y="540" width="165" height="60" as="geometry"/></mxCell>
+        <mxCell id="n51" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;fontSize=10;endArrow=block;endFill=1;strokeColor=#5a5a5a;dashed=1;strokeColor=#999999;" edge="1" parent="1" source="n18" target="n48"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="n52" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;fontSize=10;endArrow=block;endFill=1;strokeColor=#5a5a5a;" edge="1" parent="1" source="n48" target="n49"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="n53" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;fontSize=10;endArrow=block;endFill=1;strokeColor=#5a5a5a;dashed=1;strokeColor=#999999;" edge="1" parent="1" source="n49" target="n50"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="n54" value="Search Performance" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;verticalAlign=middle;arcSize=8;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1"><mxGeometry x="690" y="430" width="175" height="50" as="geometry"/></mxCell>
+        <mxCell id="n55" value="Indexation &amp; Coverage" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;verticalAlign=middle;arcSize=8;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1"><mxGeometry x="690" y="490" width="175" height="50" as="geometry"/></mxCell>
+        <mxCell id="n56" value="Action Loop" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;verticalAlign=middle;arcSize=8;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1"><mxGeometry x="690" y="550" width="175" height="50" as="geometry"/></mxCell>
+        <mxCell id="n57" value="Data Health (internal)" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;verticalAlign=middle;arcSize=8;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1"><mxGeometry x="910" y="430" width="175" height="50" as="geometry"/></mxCell>
+        <mxCell id="n58" value="Chartbrew
+spec-driven, idempotent" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;verticalAlign=middle;arcSize=8;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1"><mxGeometry x="910" y="500" width="175" height="50" as="geometry"/></mxCell>
+        <mxCell id="n59" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;fontSize=10;endArrow=block;endFill=1;strokeColor=#5a5a5a;dashed=1;strokeColor=#999999;" edge="1" parent="1" source="n49" target="n54"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="n60" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;fontSize=10;endArrow=block;endFill=1;strokeColor=#5a5a5a;dashed=1;strokeColor=#999999;" edge="1" parent="1" source="n49" target="n55"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="n61" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;fontSize=10;endArrow=block;endFill=1;strokeColor=#5a5a5a;dashed=1;strokeColor=#999999;" edge="1" parent="1" source="n49" target="n56"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="n62" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;fontSize=10;endArrow=block;endFill=1;strokeColor=#5a5a5a;dashed=1;strokeColor=#999999;" edge="1" parent="1" source="n49" target="n57"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="n63" value="cron 2:30am CT
+run -&gt; publish" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;verticalAlign=middle;arcSize=8;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1"><mxGeometry x="240" y="545" width="165" height="55" as="geometry"/></mxCell>
+        <mxCell id="n64" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;fontSize=10;endArrow=block;endFill=1;strokeColor=#5a5a5a;dashed=1;strokeColor=#999999;" edge="1" parent="1" source="n63" target="n48"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="n65" value="TODAY  ·  cadence-driven" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#b0b0b0;dashed=1;verticalAlign=top;align=left;spacingLeft=8;fontSize=13;fontStyle=1;fontColor=#666666;" vertex="1" parent="1"><mxGeometry x="45" y="710" width="860" height="270" as="geometry"/></mxCell>
+        <mxCell id="n66" value="TARGET  ·  opportunity-driven" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#b0b0b0;dashed=1;verticalAlign=top;align=left;spacingLeft=8;fontSize=13;fontStyle=1;fontColor=#666666;" vertex="1" parent="1"><mxGeometry x="940" y="710" width="900" height="270" as="geometry"/></mxCell>
+        <mxCell id="n67" value="5 Hermes agent jobs
+Mon/Wed/Fri
+five property pipelines" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;verticalAlign=middle;arcSize=8;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1"><mxGeometry x="75" y="760" width="250" height="80" as="geometry"/></mxCell>
+        <mxCell id="n68" value="each picks its own topic
+GSC discovery + T1-T4
+rotation, in the prompt" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;verticalAlign=middle;arcSize=8;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1"><mxGeometry x="360" y="760" width="220" height="80" as="geometry"/></mxCell>
+        <mxCell id="n69" value="publishes 3x/week
+whether or not there is
+an opportunity" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;verticalAlign=middle;arcSize=8;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1"><mxGeometry x="615" y="760" width="250" height="80" as="geometry"/></mxCell>
+        <mxCell id="n70" value="no baseline, no control, no verdict
+no post any pipeline ever published has been graded" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;verticalAlign=middle;arcSize=8;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1"><mxGeometry x="360" y="875" width="475" height="60" as="geometry"/></mxCell>
+        <mxCell id="n71" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;fontSize=10;endArrow=block;endFill=1;strokeColor=#5a5a5a;" edge="1" parent="1" source="n67" target="n68"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="n72" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;fontSize=10;endArrow=block;endFill=1;strokeColor=#5a5a5a;" edge="1" parent="1" source="n68" target="n69"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="n73" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;fontSize=10;endArrow=block;endFill=1;strokeColor=#5a5a5a;dashed=1;strokeColor=#999999;" edge="1" parent="1" source="n68" target="n70"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="n74" value="cron  ·  the trigger
+Hermes still owns it" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;verticalAlign=middle;arcSize=8;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1"><mxGeometry x="970" y="745" width="190" height="70" as="geometry"/></mxCell>
+        <mxCell id="n75" value="nxtseo next
+JSON + exit code" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;verticalAlign=middle;arcSize=8;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1"><mxGeometry x="1185" y="745" width="190" height="70" as="geometry"/></mxCell>
+        <mxCell id="n76" value="agent writes copy
+LLM, outside the gate" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;verticalAlign=middle;arcSize=8;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1"><mxGeometry x="1400" y="745" width="190" height="70" as="geometry"/></mxCell>
+        <mxCell id="n77" value="nxtseo act
+engine owns the write" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;verticalAlign=middle;arcSize=8;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1"><mxGeometry x="1615" y="745" width="190" height="70" as="geometry"/></mxCell>
+        <mxCell id="n78" value="nxtseo record
+verified" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;verticalAlign=middle;arcSize=8;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1"><mxGeometry x="1185" y="860" width="190" height="70" as="geometry"/></mxCell>
+        <mxCell id="n79" value="scored 15-56d later" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;verticalAlign=middle;arcSize=8;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1"><mxGeometry x="1400" y="860" width="190" height="70" as="geometry"/></mxCell>
+        <mxCell id="n80" value="exit 3 = cadence floor
+fall back, ungraded" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;verticalAlign=middle;arcSize=8;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1"><mxGeometry x="970" y="860" width="190" height="70" as="geometry"/></mxCell>
+        <mxCell id="n81" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;fontSize=10;endArrow=block;endFill=1;strokeColor=#5a5a5a;" edge="1" parent="1" source="n74" target="n75"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="n82" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;fontSize=10;endArrow=block;endFill=1;strokeColor=#5a5a5a;" edge="1" parent="1" source="n75" target="n76"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="n83" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;fontSize=10;endArrow=block;endFill=1;strokeColor=#5a5a5a;" edge="1" parent="1" source="n76" target="n77"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="n84" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;fontSize=10;endArrow=block;endFill=1;strokeColor=#5a5a5a;" edge="1" parent="1" source="n77" target="n78"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="n85" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;fontSize=10;endArrow=block;endFill=1;strokeColor=#5a5a5a;" edge="1" parent="1" source="n78" target="n79"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="n86" value="no action ranked" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;fontSize=10;endArrow=block;endFill=1;strokeColor=#5a5a5a;dashed=1;strokeColor=#999999;" edge="1" parent="1" source="n75" target="n80"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="n87" value="live" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;verticalAlign=middle;arcSize=8;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1"><mxGeometry x="1490" y="40" width="110" height="22" as="geometry"/></mxCell>
+        <mxCell id="n88" value="built, unproven" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;verticalAlign=middle;arcSize=8;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1"><mxGeometry x="1610" y="40" width="130" height="22" as="geometry"/></mxCell>
+        <mxCell id="n89" value="being replaced" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;verticalAlign=middle;arcSize=8;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1"><mxGeometry x="1750" y="40" width="110" height="22" as="geometry"/></mxCell>
+        <mxCell id="n90" value="STATUS
+
+The loop closed for the first time on 2026-09-06:
+indexing actions executed against a live property,
+grading window opens 15 days later.
+
+Not yet built: an agent between next and act for
+content, and a git-backed copy adapter that edits
+real source files rather than a sidecar." style="shape=note;whiteSpace=wrap;html=1;size=14;fontSize=11;align=left;spacingLeft=6;fillColor=#ffffff;strokeColor=#b0b0b0;" vertex="1" parent="1"><mxGeometry x="1180" y="985" width="660" height="175" as="geometry"/></mxCell>
+        <mxCell id="n91" value="NxtSEO  ·  how it maps out" style="text;html=1;fontSize=20;fontStyle=1;align=left;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="20" y="15" width="520" height="30" as="geometry"/></mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
